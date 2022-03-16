@@ -1,0 +1,19 @@
+@import "../styles/variables.module";
+
+.content {
+    //display: grid;
+    background-color: $neutral-200;
+    //grid-template-columns: minmax(min-content, 1024px);
+    padding: 50px 0;
+    //justify-content: center;
+    border-radius: 35px;
+
+    @media (max-width: $tablet) {
+        padding: 0;
+    }
+
+    &-none {
+        composes: content;
+        display: none;
+    }
+}

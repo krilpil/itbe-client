@@ -1,0 +1,57 @@
+@import "../../../../../styles/variables.module";
+
+$border-radius: 35px;
+
+.content {
+    background-color: $neutral-100;
+    border-radius: $border-radius;
+    box-shadow: 0 3px 22px 0 rgba(35, 30, 97, 0.13);
+
+    &__header {
+        display: grid;
+        row-gap: 5px;
+        background-color: $neutral-300;
+        padding: 35px 10px;
+        border-radius: $border-radius $border-radius 0 0;
+        text-align: center;
+
+        &-title {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        &-bread-crumbs {
+            $read-crumbs-gap: 5px;
+
+            display: flex;
+            column-gap: $read-crumbs-gap;
+            justify-content: center;
+            list-style-type: none;
+
+            &-li {
+                color: $neutral-600;
+                font-size: 13px;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                a {
+                    color: $neutral-600;
+                    text-decoration: underline;
+                }
+
+                &:after {
+                    content: "/";
+                    margin-left: $read-crumbs-gap;
+                }
+
+                &:last-child:after {
+                    content: "";
+                }
+            }
+        }
+    }
+
+    &__main {
+        padding: 0;
+    }
+}

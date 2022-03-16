@@ -1,0 +1,41 @@
+@import "../../../styles/variables.module";
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    min-height: $header-height;
+    //justify-self: center;
+    //max-width: 1024px;
+
+    &__menu {
+        justify-self: left;
+    }
+
+    &__logotype {
+        justify-self: center;
+        align-self: center;
+        background-image: url("/src/assets/images/brand/logo.svg");
+        background-repeat: no-repeat;
+        width: 97px;
+        height: 33px;
+    }
+
+    &__menu-button {
+        $icon-size: 30px;
+        background-image: url("/src/assets/images/interface/menu.svg");
+        background-color: inherit;
+        border: none;
+        background-size: $icon-size;
+        background-position: center center;
+        width: $icon-size;
+        height: $icon-size;
+        cursor: pointer;
+
+        &:active {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+    }
+}

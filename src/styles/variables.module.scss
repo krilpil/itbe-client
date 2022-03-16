@@ -1,0 +1,26 @@
+$primary-color: #0C0C0C;
+$general-color: #71297F;
+$neutral-600: #626262;
+$neutral-500: #9C9C9C;
+$neutral-400: #D2D2D2;
+$neutral-300: #F5F5F5;
+$neutral-200: #FBFBFB;
+$neutral-100: #FFFFFF;
+
+$tablet: 768px;
+$large-mobile: 425px;
+$average-mobile: 375px;
+
+$header-height: 60px;
+$footer-height: 60px;
+
+//@mixin linear-gradient($direction, $fromColor, $toColor) {
+//    background-color: $toColor;
+//    background-image: -webkit-gradient(linear, $direction, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+//    background-image: -webkit-linear-gradient($direction, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+//    background-image: -moz-linear-gradient($direction, $fromColor, $toColor); /* FF3.6 */
+//    background-image: -ms-linear-gradient($direction, $fromColor, $toColor); /* IE10 */
+//    background-image: -o-linear-gradient($direction, $fromColor, $toColor); /* Opera 11.10+ */
+//    background-image: linear-gradient($direction, $fromColor, $toColor);
+//    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+//}

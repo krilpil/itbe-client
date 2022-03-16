@@ -1,0 +1,26 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+    }
+}
+
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-ThinItalic', 100, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Thin', 100, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-ExtraLight', 200, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-ExtraLightItalic', 200, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-LightItalic', 300, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Light', 300, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-SemiBoldItalic', 600, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-SemiBold', 600, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-HeavyItalic', 800, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Heavy', 800, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-BlackItalic', 900, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Black', 900, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-RegularItalic', normal, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Regular', normal, normal)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-BoldItalic', bold, italic)
+@include font-face('Mont', '/src/assets/fonts/mont/Mont-Bold', bold, normal)

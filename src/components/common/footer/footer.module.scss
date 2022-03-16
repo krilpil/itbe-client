@@ -1,0 +1,13 @@
+@import "../../../styles/variables.module";
+
+.footer {
+    display: grid;
+    min-height: $footer-height;
+
+    &__created {
+        color: $neutral-100;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+}

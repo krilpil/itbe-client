@@ -1,0 +1,32 @@
+@import "/src/styles/variables.module";
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    //@include linear-gradient(bottom, #371A73, #71297F);
+    background-color: $neutral-300;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    font-family: "Mont", sans-serif;
+    color: $primary-color;
+    background-color: $general-color;
+    //@include linear-gradient(right, #371A73, #71297F);
+}

@@ -1,0 +1,160 @@
+@import "../../../styles/variables.module";
+
+.add-product {
+    display: grid;
+    padding: 25px;
+    grid-gap: 10px;
+
+    &-row {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 92px auto;
+        align-items: center;
+
+        &:nth-last-child(2) {
+            margin-bottom: 15px;
+        }
+
+        &__save {
+            display: grid;
+            float: right;
+            padding: 15px 40px;
+            color: $neutral-100;
+            font-size: 16px;
+            font-family: "Mont", sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            background-color: $general-color;
+        }
+
+        &__title {
+            padding: 0;
+            margin: 0;
+        }
+
+        &__input {
+            min-width: 0;
+            border: 1px solid $neutral-400;
+            border-radius: 15px;
+            background: $neutral-100;
+            color: $primary-color;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 9px 13px;
+            text-align: center;
+        }
+
+        &__price {
+            composes: add-product-row__input;
+            width: 120px;
+
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+        }
+
+        &__choice {
+            display: grid;
+        }
+
+        &__button {
+            border: 1px solid $neutral-400;
+            border-radius: 15px;
+            background: $neutral-100;
+            color: $neutral-600;
+            font-size: 13px;
+            font-family: "Mont", sans-serif;
+            font-weight: 800;
+            padding: 9px 15px;
+            min-width: 150px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $neutral-200;
+            }
+
+            &_active {
+                composes: add-product-row__button;
+                border-radius: 15px 15px 0 0;
+                border-bottom-style: none;
+                padding-bottom: 10px;
+
+            }
+        }
+
+        &__level {
+            display: grid;
+            width: 150px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1px;
+            border: 1px solid $neutral-400;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 800;
+            overflow: hidden;
+            background-color: $neutral-400;
+
+            &-button {
+                background-color: $neutral-100;
+                text-align: center;
+                padding: 9px;
+                cursor: pointer;
+                user-select: none;
+
+                &:hover {
+                    background-color: $neutral-200;
+                }
+
+                &_blocked {
+                    composes: add-product-row__level-button;
+                    cursor: not-allowed;
+                    background-color: $neutral-300;
+
+                    &:hover {
+                        background-color: $neutral-300;
+                    }
+                }
+            }
+        }
+
+        &__list {
+            position: absolute;
+            z-index: 1;
+            display: grid;
+            grid-gap: 10px;
+            margin-top: 0;
+            padding: 0 10px;
+            background-color: $neutral-300;
+            border-radius: 0 10px 10px 10px;
+            max-height: 0;
+            min-width: 170px;
+            overflow-x: hidden;
+            opacity: 0.5;
+            //transition-duration: .2s;
+
+            &_active {
+                composes: add-product-row__list;
+                padding: 10px;
+                display: grid;
+                max-height: calc((15px * 2 + 14px) * 5 + 10px); //(padding li * 2 + font size li) * quantity li + padding ul
+                border: 1px solid $neutral-400;
+                opacity: 1;
+            }
+        }
+
+        &__link {
+            list-style: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background-color: $neutral-100;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $neutral-200;
+            }
+        }
+    }
+}

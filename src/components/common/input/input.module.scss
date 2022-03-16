@@ -1,0 +1,18 @@
+@import "../../../styles/variables.module";
+
+.input {
+    min-width: 0;
+    border: 1px solid $neutral-400;
+    border-radius: 15px;
+    background: $neutral-100;
+    color: $primary-color;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 9px 13px;
+    text-align: center;
+
+    &:disabled {
+        margin: 50px;
+        color: red;
+    }
+}
